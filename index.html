@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Read-only winery laboratory dashboard connected to Google Sheets.">
+  <title>Winery Lab PWA</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">WINERY OPERATIONS</p>
+      <h1>Laboratory Dashboard</h1>
+      <p class="subhead">Read-only Google Sheets viewer</p>
+    </div>
+    <button id="refreshBtn" class="secondary">↻ Refresh data</button>
+  </header>
+
+  <main>
+    <div id="status" class="status" role="status">Loading data…</div>
+
+    <section class="metrics" aria-label="Dashboard summary">
+      <article class="metric"><span>Brands</span><strong id="brandCount">—</strong></article>
+      <article class="metric"><span>Lab records</span><strong id="labCount">—</strong></article>
+      <article class="metric"><span>Unique batches</span><strong id="batchCount">—</strong></article>
+      <article class="metric"><span>Unique tanks</span><strong id="tankCount">—</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><h2>Search records</h2><p>Search brands, batch IDs, tanks, or analysis values.</p></div>
+      </div>
+      <label class="search-label" for="searchInput">Search</label>
+      <input id="searchInput" type="search" placeholder="e.g. J'NOON, T-113, batch number…" autocomplete="off">
+      <div class="filters">
+        <label>Record type
+          <select id="typeFilter">
+            <option value="all">All records</option>
+            <option value="brand">Brands / alcohol</option>
+            <option value="lab">Laboratory results</option>
+          </select>
+        </label>
+        <label>Analysis
+          <select id="analysisFilter">
+            <option value="all">All analyses</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><h2>Records</h2><p id="resultSummary">Showing records</p></div>
+        <button id="clearBtn" class="text-button">Clear filters</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr id="tableHead"></tr></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <p id="emptyState" class="empty" hidden>No matching records. Try a different search or refresh the sheet.</p>
+    </section>
+    <footer>Winery Lab PWA · Data is read-only · Offline mode uses the last successfully loaded data.</footer>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
