@@ -5,10 +5,10 @@
  * 3. Public CSV means anyone with the link may be able to read that published data.
  */
 const CONFIG = {
-  // https://docs.google.com/spreadsheets/d/e/2PACX-1vTA4f1T_ZfQHiLmDklP5CZG9qOLMLwtu6GvSZqsw-5egn9m-7fmyEkvrgzz-pMcBA/pub?gid=1050578648&single=true&output=csv
+  https://docs.google.com/spreadsheets/d/e/2PACX-1vR-mXP3MOEeJ-N763eg_UkA5AJrHoAZnNf2RuBOLCgST0HV8o8edXvThzWN4lD6TNyyMWB_8DRg-v6a/pub?gid=0&single=true&output=csv
   brandCsvUrl: "",
   labCsvUrl: "",
-  // Optional refresh interval is intentionally manual to reduce requests.
+  // https://docs.google.com/spreadsheets/d/e/2PACX-1vR-mXP3MOEeJ-N763eg_UkA5AJrHoAZnNf2RuBOLCgST0HV8o8edXvThzWN4lD6TNyyMWB_8DRg-v6a/pub?gid=0&single=true&output=csv
   cacheKey: "winery-lab-pwa-cache-v1"
 };
 
