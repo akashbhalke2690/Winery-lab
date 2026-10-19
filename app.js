@@ -4,13 +4,13 @@
  * 2. Use a single combined sheet if possible. Headers are matched case-insensitively.
  * 3. Public CSV means anyone with the link may be able to read that published data.
  */
+
 const CONFIG = {
-  https://docs.google.com/spreadsheets/d/e/2PACX-1vR-mXP3MOEeJ-N763eg_UkA5AJrHoAZnNf2RuBOLCgST0HV8o8edXvThzWN4lD6TNyyMWB_8DRg-v6a/pub?gid=0&single=true&output=csv
-  brandCsvUrl: "",
+  brandCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR-mXP3MOEeJ-N763eg_UkA5AJrHoAZnNf2RuBOLCgST0HV8o8edXvThzWN4lD6TNyyMWB_8DRg-v6a/pub?gid=0&single=true&output=csv",
   labCsvUrl: "",
-  // https://docs.google.com/spreadsheets/d/e/2PACX-1vR-mXP3MOEeJ-N763eg_UkA5AJrHoAZnNf2RuBOLCgST0HV8o8edXvThzWN4lD6TNyyMWB_8DRg-v6a/pub?gid=0&single=true&output=csv
-  cacheKey: "winery-lab-pwa-cache-v1"
+  cacheKey: "winery-lab-pwa-cache-v2"
 };
+
 
 const SAMPLE_BRANDS = [
   {"Record Type":"Brand","Brand":"J'NOON INDIA RED WINE","Alcohol %":"13.50%"},
