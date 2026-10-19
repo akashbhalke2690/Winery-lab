@@ -5,7 +5,7 @@
  * 3. Public CSV means anyone with the link may be able to read that published data.
  */
 const CONFIG = {
-  // Replace these with your published CSV URLs. Leave blank until configured.
+  // https://docs.google.com/spreadsheets/d/e/2PACX-1vTA4f1T_ZfQHiLmDklP5CZG9qOLMLwtu6GvSZqsw-5egn9m-7fmyEkvrgzz-pMcBA/pub?gid=1050578648&single=true&output=csv
   brandCsvUrl: "",
   labCsvUrl: "",
   // Optional refresh interval is intentionally manual to reduce requests.
